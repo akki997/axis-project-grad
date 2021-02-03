@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "insurancecluster-4549"
+    labels:
+        app: "insurancecluster-4549"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 9096
+      targetPort: 9096
+      protocol: TCP
+      name: http
+    selector:
+        app: "insurancecluster-4549"
