@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "insurancecluster-4549"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "insurancecluster-4549"
+  template:
+    metadata:
+      labels:
+        app: "insurancecluster-4549"
+    spec:
+      containers:
+        - name: "insurancecluster-4549"
+          image: "insurancemart.azurecr.io/insurancecluster"
+          ports:
+          - containerPort: 9096
