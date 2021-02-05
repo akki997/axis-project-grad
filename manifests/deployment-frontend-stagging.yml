@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: react-frontend
-          image: insuranceregistry.azurecr.io/insuranceteststagging/frontend
+          image: insurancemart.azurecr.io/insurancecluster/frontend
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

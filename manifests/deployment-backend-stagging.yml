@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: insurance-backend
-          image: insuranceregistry.azurecr.io/insuranceteststagging
+          image: insurancemart.azurecr.io/insurancecluster
           ports:
             - containerPort: 9096
 
