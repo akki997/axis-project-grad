@@ -28,7 +28,7 @@ jobs:
     - uses: actions/checkout@master  
     - uses: azure/docker-login@v1
       with:
-        login-server: insuranceregistry.azurecr.io
+        login-server: insurancemart.azurecr.io
         username: ${{ secrets.acr_insurancemart_username }}
         password: ${{ secrets.acr_insurancemart_password }}
     
@@ -65,7 +65,7 @@ jobs:
         manifests: |
           manifests/deployment-backend-stagging.yml
         images: |
-          insuranceregistry.azurecr.io/insurancecluster:${{ github.sha }}
+          insurancemart.azurecr.io/insurancecluster:${{ github.sha }}
         imagepullsecrets: |
           insurancetesdockerauth
   deploy-frontend:
